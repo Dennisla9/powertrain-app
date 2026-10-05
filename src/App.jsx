@@ -31,7 +31,7 @@ const AuthenticatedApp = () => {
         <Route path="/" element={<Dashboard />} />
         <Route path="/equipment/:id" element={<EquipmentDetail />} />
       </Route>
-      <Route path="*" element={div>Página no encontrada</div>} />
+     <Route path="*" element={<div>404</div>} />
     </Routes>
   );
 };
