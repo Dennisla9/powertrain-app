@@ -41,7 +41,7 @@ function App() {
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
         <Router>
-          <ScrollToTop />
+          </* <ScrollToTop/> */>
           <AuthenticatedApp />
         </Router>
         <Toaster />
