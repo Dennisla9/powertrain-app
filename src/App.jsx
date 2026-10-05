@@ -38,15 +38,17 @@ const AuthenticatedApp = () => {
 
 function App() {
   return (
-    <AuthProvider>
-      <QueryClientProvider client={queryClientInstance}>
+    <QueryClientProvider client={queryClientInstance}>
+      <AuthProvider>
         <Router>
-          </* <ScrollToTop/> */>
-          <AuthenticatedApp />
+          {/* <ScrollToTop /> */}
+          <Routes>
+            <Route path="/" element={<div>Aplicación Powertrain</div>} />
+            <Route path="*" element={<div>404 - Página no encontrada</div>} />
+          </Routes>
         </Router>
-        <Toaster />
-      </QueryClientProvider>
-    </AuthProvider>
+      </AuthProvider>
+    </QueryClientProvider>
   );
 }
 
